@@ -1,0 +1,32 @@
+{
+  "name": "bocal",
+  "version": "0.1.0",
+  "description": "Snapshot, share, and restore your local dev environment — db dumps, files, env vars.",
+  "homepage": "https://bocal.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hefgi/bocal.git"
+  },
+  "license": "Apache-2.0",
+  "author": "hefgi",
+  "keywords": [
+    "snapshot",
+    "fixtures",
+    "environment",
+    "cli",
+    "devtools"
+  ],
+  "bin": {
+    "bocal": "bin/bocal.js"
+  },
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "files": [
+    "bin/bocal.js",
+    "install.js"
+  ],
+  "engines": {
+    "node": ">=16"
+  }
+}
