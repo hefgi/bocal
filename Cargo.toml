@@ -1,0 +1,28 @@
+[package]
+name = "bocal"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Snapshot, share, and restore your local dev environment — db dumps, files, env vars."
+license = "Apache-2.0"
+homepage = "https://bocal.ai"
+repository = "https://github.com/hefgi/bocal"
+documentation = "https://hefgi.github.io/bocal"
+keywords = ["snapshot", "fixtures", "environment", "cli", "devtools"]
+categories = ["command-line-utilities", "development-tools"]
+readme = "README.md"
+
+[[bin]]
+name = "bocal"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
